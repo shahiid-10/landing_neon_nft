@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+@font-face {
+  font-family: font1;
+  src: url(./assets/NBInternationalProBoo.woff2);
+}
+
+@font-face {
+  font-family: font2;
+  src: url(./assets/Rejouice-Headline.woff2);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #317F68;
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  font-family: font1;
+}
+
+
+/* NAVBAR */
+
+nav {
+  padding: 3vw 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 1.4vw;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  transition: all linear 0.4s;
+}
+
+.nav-part1 a:hover {
+  scale: 0.9
+}
+
+.nav-part1 {
+  display: flex;
+}
+
+.nav-part1 #active {
+  border-bottom: 1px solid white;
+}
+
+.nav-part2 {
+  display: flex;
+  /* background: red; */
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icons {
+  transition: all linear 0.4s;
+}
+
+.nav-icons:hover {
+  transform: rotate(-30deg);
+}
+
+.search-container {
+  padding: 3px;
+  color: white;
+  border-radius: 50px;
+  width: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  transition: all ease 0.3s;
+}
+
+.search-container .search-icon {
+  transition: all ease-in-out 0.5s;
+}
+
+.search-container:hover {
+  background: #051717;
+}
+
+.search-container:hover .search-icon {
+  transform: translateX(34px);
+}
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-part2 {
+    display: none;
+  }
+}
+
+/* HERO */
+
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  padding: 0 5rem;
+  justify-content: space-between;
+}
+
+.hero-part1 {
+  height: 85%;
+  width: 33%;
+  position: relative;
+}
+
+.hero-part1 .big-font {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 11vw;
+  color: #78B9A7;
+  font-family: font2;
+  transform: rotate(-90deg) translate(45%, 100%);
+}
+
+.hero-part1 .small-font {
+  position: absolute;
+  font-family: "Barlow Condensed", sans-serif;
+  right: 13vw;
+  bottom: 54px;
+  font-size: 4vw;
+  color: #78B9A7;
+  transform: rotate(-90deg) translate(45%, 100%);
+}
+
+.hero-part1 #links {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.hero-part1 #links h3 {
+  cursor: pointer;
+  transition: all linear 0.2s;
+  color: rgba(255, 255, 255, 0.621)
+}
+
+.hero-part1 #links h3:hover {
+  color: #051717;
+}
+
+.hero-part2 {
+  min-width: 33%;
+}
+
+.hero-part2 img {
+  height: 100%;
+  width: 100%;
+}
+
+.hero-part3 {
+  height: 100%;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+
+.hero-part3 h1 {
+  margin-top: 11vw;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+}
+
+.hero-part3 p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.hero-part3 div {
+  border: 1px solid white;
+  padding: 20px 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 1.3vw;
+  font-weight: bold;
+  gap: 1rem;
+  border-color: linear-gradient(top, #555555, #111111);
+  transition: all ease-out 0.3s;
+  cursor: pointer;
+}
+
+.hero-part3 div:hover {
+  background-color: #051717;
+  border: none;
+}
+
+.hero-part3 div:hover .icon {
+  transform: translateX(10px);
+  transition: all ease 0.5s;
+
+}
+
+
+#cursor {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding-top: 1.5rem;
+  }
+
+  .hero-part3 {
+    display: none;
+  }
+
+  #cursor {
+    display: none;
+  }
+}
